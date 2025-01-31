@@ -7,10 +7,12 @@ $(function() {
             $(".content").empty();
             for(let eachCard of result){
                 $(".content").append(`
-                    <div class="card"> 
-                        <p class="username">${eachCard.name}</p>
-                        <p class="usersurname">${eachCard.apellido}</p>
-                        <p class="userphone">${eachCard.tlf}</p> 
+                    <div class = "card"> 
+
+                        <p class = "username">${eachCard.name}</p>
+                        <p class = "usersurname">${eachCard.apellido}</p>
+                        <p class = "userphone">${eachCard.tlf}</p> 
+
                     </div>
                 `);
             }
@@ -31,10 +33,12 @@ $(function() {
                 $(".content").empty();
                 for(let eachCard of result){
                     $(".content").append(`
-                        <div class="card"> 
-                            <p class="username">${eachCard.name}</p> 
-                            <p class="usersurname">${eachCard.apellido}</p> 
-                            <p class="userphone">${eachCard.tlf}</p> 
+                        <div class = "card"> 
+
+                            <p class = "username">${eachCard.name}</p> 
+                            <p class = "usersurname">${eachCard.apellido}</p> 
+                            <p class = "userphone">${eachCard.tlf}</p> 
+
                         </div>
                     `);
                 }
@@ -56,15 +60,18 @@ $(function() {
             url: `https://back-python-vercel.vercel.app/api/users/${userName}`,
             type: "GET",
             success: function(result){
-                userFound = result
                 $(".content").empty();
-                $(".content").append(`
-                    <div class="card"> 
-                        <p class="username">${userFound.name}</p> 
-                        <p class="usersurname">${userFound.apellido}</p> 
-                        <p class="userphone">${userFound.tlf}</p> 
-                    </div>
-                `);
+                for(let eachUser of result){
+                    $(".content").append(`
+                        <div class = "card"> 
+
+                            <p class = "username">${eachUser.name}</p> 
+                            <p class = "usersurname">${eachUser.apellido}</p> 
+                            <p class = "userphone">${eachUser.tlf}</p> 
+                            
+                        </div>
+                    `);
+                }
             },
             error: function (xhr, status, error) {
                 console.error("Error:", status, error);
