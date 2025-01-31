@@ -91,7 +91,6 @@ $(function() {
         let phone = $("#phone").val();
 
         if (name && surname && phone) {
-            // Enviar los datos al servidor
             $.ajax({
                 url: "https://back-python-vercel.vercel.app/api/users",
                 type: "POST",
@@ -99,8 +98,8 @@ $(function() {
                 data: JSON.stringify({ name: name, apellido: surname, tlf: phone }),
                 success: function () {
                     alert("Usuario agregado exitosamente");
-                    $("#modal").addClass("hidden"); // Cerrar modal
-                    $("#name").val(""); // Limpiar campos
+                    $("#modal").addClass("hidden");
+                    $("#name").val("");
                     $("#surname").val("");
                     $("#phone").val("");
                     location.reload();
