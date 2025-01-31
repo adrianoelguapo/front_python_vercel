@@ -33,7 +33,7 @@ $(function() {
                     $(".content").append(`
                         <div class="card"> 
                             <p class="userid">${eachCard.name}</p> 
-                            <p class="usernameandsurname">${eachCard.apellido}</p> 
+                            <p class="usersurname">${eachCard.apellido}</p> 
                             <p class="userphone">${eachCard.tlf}</p> 
                         </div>
                     `);
@@ -61,7 +61,7 @@ $(function() {
                 $(".content").append(`
                     <div class="card"> 
                         <p class="userid">${userFound.name}</p> 
-                        <p class="usernameandsurname">${userFound.apellido}</p> 
+                        <p class="usersurname">${userFound.apellido}</p> 
                         <p class="userphone">${userFound.tlf}</p> 
                     </div>
                 `);
