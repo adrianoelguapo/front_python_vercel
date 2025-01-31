@@ -32,7 +32,7 @@ $(function() {
                 for(let eachCard of result){
                     $(".content").append(`
                         <div class="card"> 
-                            <p class="userid">${eachCard.name}</p> 
+                            <p class="username">${eachCard.name}</p> 
                             <p class="usersurname">${eachCard.apellido}</p> 
                             <p class="userphone">${eachCard.tlf}</p> 
                         </div>
@@ -60,7 +60,7 @@ $(function() {
                 $(".content").empty();
                 $(".content").append(`
                     <div class="card"> 
-                        <p class="userid">${userFound.name}</p> 
+                        <p class="username">${userFound.name}</p> 
                         <p class="usersurname">${userFound.apellido}</p> 
                         <p class="userphone">${userFound.tlf}</p> 
                     </div>
